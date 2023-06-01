@@ -1,0 +1,193 @@
+#design_wrap section .project_design h1 {
+    text-transform:uppercase; 
+    padding:20px 0; 
+    margin:50px 0; 
+    font-size:1.3rem;
+     color:#333; 
+     font-weight: 700;
+    }
+#skill section .skill svg {
+    margin:50px;
+}
+#design_wrap section .project_design .design1 {
+    display:flex; 
+    flex-flow:row nowrap; 
+    /* justify-content:flex-start; */
+    overflow: hidden; 
+}
+#design_wrap section .project_design .design1 .frame  {
+    overflow:hidden; 
+    background-position: center top; 
+    display:flex;
+}
+#design_wrap section .project_design .design1 .frame a {
+    height:200px; 
+    width:250px; 
+    margin:10px; 
+    background-size:100%; 
+    background-position:center top; 
+    border:1px solid #ddd;  
+    /* overflow: hidden; */
+}
+#design_wrap section .project_design .design1 .frame a:hover {
+    height:200px; 
+    width:250px; 
+    margin:10px; 
+    background-size:120%;  
+    background-position:center top;
+    border:1px solid #ddd; 
+    transition:all 1s;
+}
+/* 상세페이지 이미지 */
+#design_wrap section .project_design .design1 .frame a:nth-child(1) {background-image:url(../images/notice1-1.png)}
+#design_wrap section .project_design .design1 .frame a:nth-child(2) {background-image:url(../images/notice2-1.png)}
+#design_wrap section .project_design .design1 .frame a:nth-child(3) {background-image:url(../images/notice3-1.png)}
+#design_wrap section .project_design .design1 .frame a:nth-child(4) {background-image:url(../images/notice4-1.png)}  
+#design_wrap section .project_design .design1 .frame a:nth-child(5) {background-image:url(../images/notice5-1.PNG)} 
+/* 상세페이지 이미지 */
+#design_wrap section .project_design .design2 {
+    display:flex; 
+    flex-flow:row wrap; 
+    justify-content:space-between;
+}
+#design_wrap section .project_design .design2 .frame  {
+    display:flex; 
+    flex-flow:row wrap; 
+    justify-content:space-between;
+}
+#design_wrap section .project_design .design2 .frame  a {
+    height:250px; 
+    width:250px;
+    margin:10px; 
+    background-size:100%; 
+    background-position:center top; 
+    border:1px solid #ddd;  
+    overflow: hidden;
+}
+#design_wrap section .project_design .design2 .frame  a:hover {
+    height:250px; 
+    width:250px;
+    transition:all 1s;
+    background-size:120%; 
+}
+/* SNS광고 이미지 */
+#design_wrap section .project_design .design2 .frame a:nth-child(1) {background-image:url(../images/sns1.png)}
+#design_wrap section .project_design .design2 .frame a:nth-child(2) {background-image:url(../images/sns2.png)}
+#design_wrap section .project_design .design2 .frame a:nth-child(3) {background-image:url(../images/sns3.png)}
+#design_wrap section .project_design .design2 .frame a:nth-child(4) {background-image:url(../images/sns4.png)}
+#design_wrap section .project_design .design2 .frame a:nth-child(5) {background-image:url(../images/sns5.jpg)}
+#design_wrap section .project_design .design2 .frame a:nth-child(6) {background-image:url(../images/sns6.jpg)}
+#design_wrap section .project_design .design2 .frame a:nth-child(7) {background-image:url(../images/sns7.png)}
+#design_wrap section .project_design .design2 .frame a:nth-child(8) {background-image:url(../images/sns8.jpg)}
+/* SNS광고 이미지 */
+
+#project_wrap > h1 {
+    padding:50px 0; 
+    font-size:2rem; 
+    line-height:1.2; 
+    letter-spacing:-0.02rem;
+}
+#project_wrap > h1 span {
+    font-size:2rem; 
+    color:rgb(255, 240, 107); 
+    font-weight:700;
+}
+#project_wrap section {}
+#project_wrap section .project_web {
+    display:flex;
+     flex-flow:row wrap; 
+     justify-content: space-between; 
+     margin-top:100px;
+    }
+#project_wrap section .project_web .web {
+    margin:0 0 100px; 
+    width:49%; 
+    overflow:hidden;
+}
+#project_wrap section .project_web .web h1 {
+    text-transform:uppercase; 
+    padding:20px 0; 
+    margin:20px 0; 
+    font-size:1.3rem; 
+    color:#333; 
+    font-weight: 700;
+}
+#project_wrap section .project_web .web .project {
+    display:flex; 
+    flex-flow:column nowrap; 
+    justify-content: space-between; 
+    align-items: center;
+}
+#project_wrap section .project_web .web3 {
+    width:100%;
+}
+#project_wrap section .project_web .web3 .content {
+    padding-left:20px !important;
+}
+#project_wrap section .project_web .web3 .project {
+    display:flex; 
+    flex-flow:row nowrap; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#project_wrap section .project_web .web .project .img {
+    height:300px; 
+    width:500px; 
+    background-size:cover;
+     background-position:center top;
+    }
+#project_wrap section .project_web .web .project .img1 {
+    background-image:url(../images/movie\ 모니터.jpg);
+}
+#project_wrap section .project_web .web .project .img1 {
+    width: 572.31px;
+    height: 592px;
+}
+#project_wrap section .project_web .web .project .img2 {
+    background-image:url(../images/emart\ 모니터.jpg);
+}
+#project_wrap section .project_web .web .project .img2 {
+    width: 572.31px;
+    height: 592px;
+}
+#project_wrap section .project_web .web .project .content {
+    padding:20px 15px 0 0;
+}
+#project_wrap section .project_web .web .project .content dl {
+    display:flex; 
+    flex-flow:row wrap;
+}
+#project_wrap section .project_web .web .project .content dl dt {
+    width:25%; 
+    padding:10px 0; 
+    font-weight: 700; 
+    color:#333;
+}
+#project_wrap section .project_web .web .project .content dl dd {
+    width:75%; 
+    padding:10px 0;
+}
+#project_wrap section .project_web .web .project .content .link {
+    /* display:flex; flex-flow:row wrap; */ 
+    margin-top:50px; 
+    justify-content: start;
+}
+#project_wrap section .project_web .web .project .content .link a {
+    display:inline-block;
+    text-transform:capitalize; 
+    background:#fff; 
+    border:1px solid #0078AA; 
+    color:#0078AA; 
+    border-radius:7px; 
+    margin-bottom:5px; 
+    margin-right:5px; 
+    padding:7px;
+}
+#project_wrap section .project_web .web .project .content .link a:hover {
+    border:2px solid #0078AA; 
+    color:#0078AA; 
+    background:#ddd;
+}
+
+

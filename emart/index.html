@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬로 이마트</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        ul {
+          list-style: none;
+        }
+        #slideShow {
+          width: 1150px;
+          height: 600px;
+          position: relative;
+          margin: 50px auto;
+          overflow: hidden;
+        }
+        .slides {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .slides li {
+          width: 1200px;
+          height: 600px;
+        }
+        .slides img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .slides li {
+          float: left;
+        }
+        .controller li {
+          position: absolute;
+          color: #000;
+          text-align: center;
+          /* border-radius: 50%; */
+          /* padding: 10px 20px; */
+          width: 21px;
+          height: 39px;
+          top: 50%;
+          font-size: 1.3em;
+          cursor: pointer;
+          text-indent: -9999px;
+          background-image: url(../javascript/images/btns.png);
+        }
+        .prev {
+          left: 10px;
+          background-position: -6px -4px;
+        }
+        /* .prev:hover {
+          transform: translateX(-10px);
+        } */
+        .next {
+          right: 10px;
+          background-position: -29px -4px;
+        }
+        /* .next:hover {
+          transform: translateX(10px);
+        } */
+        .page {
+          position: absolute;
+          top: 180px;
+          right: 330px;
+          width: 1%;
+          height: 100%;
+          text-align: center;
+        }
+        .page li {
+          display: inline-block;
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background: #666;
+          border-radius: 50%;
+          transition: background 0.6s ease;
+        }
+        .page li.active,
+        .page li:hover {
+          background: rgba(255, 174, 0, 0.911);
+        }
+      </style>
+       <script src="js/jquery-3.6.4.min.js"></script>
+       <script>
+         $(function () {
+           let current = 0;
+           let i = $(".slides li").length;
+           $(".page li").eq(0).addClass("active");
+           let slideWidth = $(".slides li").width();
+           console.log(slideWidth);
+           $(".slides").append($(".slides li").eq(0).clone());
+           $(".slides").prepend(
+             $(".slides li")
+               .eq(i - 1)
+               .clone()
+           );
+           $(".slides").css({
+             width: slideWidth * (i + 2) + "px",
+             left: -slideWidth + "px",
+           });
+           function showSlide(n) {
+             $(".page li").removeClass("active");
+             $(".page li").eq(n).addClass("active");
+             $(".slides").css({
+               left: -(n + 1) * slideWidth + "px",
+               transition: "0.5s",
+             });
+           }
+           $(".page li").click(function () {
+             let n = $(this).index();
+             showSlide((current = n));
+           });
+           $(".next").click(function () {
+             if (current <= i - 1) {
+               //슬라이드이동
+               $(".slides").css({
+                 left: -(current + 2) * slideWidth + "px",
+                 transition: "0.5s",
+               });
+             }
+             if (current == i - 1) {
+               setTimeout(function () {
+                 $(".slides").css({ left: -slideWidth + "px", transition: "0s" });
+               }, 500);
+               current = -1;
+             }
+             current += 1;
+             $(".page li").removeClass("active");
+             $(".page li").eq(current).addClass("active");
+           });
+           $(".prev").click(function () {
+             if (current >= 0) {
+               $(".slides").css({
+                 left: -current * slideWidth + "px",
+                 transition: "0.5s",
+               });
+             }
+             if (current == 0) {
+               setTimeout(function () {
+                 $(".slides").css({
+                   left: -i * slideWidth + "px",
+                   transition: "0s",
+                 });
+               }, 500);
+               current = i;
+             }
+             current -= 1;
+             $(".page li").removeClass("active");
+             $(".page li").eq(current).addClass("active");
+           });
+           let interval = setInterval(function () {
+             $(".next").trigger("click");
+           }, 2000);
+           $("#slideShow").hover(
+             function () {
+               clearInterval(interval);
+             },
+             function () {
+               interval = setInterval(function () {
+                 $(".next").trigger("click");
+               }, 1000);
+             }
+           );
+         });
+       </script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="top">
+            <ul class="left">
+              <a href="#">PEACOCK &nbsp; | &nbsp;</a>
+              <a href="#">이마트몰 &nbsp; | &nbsp;</a>
+              <a href="#">신세계포인트 &nbsp; | &nbsp;</a>
+              <a href="#">문화센터 &nbsp; &nbsp;</a>
+            
+            <ul class="right"> 
+                <a href="#">My이마트 &nbsp; | &nbsp;</a>
+                <a href="#">이마트뮤직 &nbsp; | &nbsp;</a>
+                <a href="#">이마트TV &nbsp; | &nbsp;</a>
+                <a href="#">로그인 &nbsp; | &nbsp;</a>
+                <a href="#">회원가입</a>
+            </ul> 
+            </ul>
+            <div class="line"></div>
+    </div> 
+    <!--탑-->
+    <div class="header">
+        <ul>
+        <a href="#">점포찾기</a>
+        <a href="#">전단광고</a>
+        <a href="index.html"><img src="images/logo/logo.png"></a>
+        <a href="#">이벤트</a>
+        <a href="#">고객센터</a> 
+        </ul>
+    </div>
+    <!--메뉴-->
+    <div id="slideShow">
+      <ul class="slides">
+        <li><a href="#"><img src="../emart/images/slide/slide1.jpg" alt="slide1" /></a></li>
+        <li><a href="#"><img src="../emart/images/slide/slide2.jpg" alt="slide2" /></a></li>
+        <li><a href="#"><img src="../emart/images/slide/slide3.jpg" alt="slide3" /></a></li>
+        <li><a href="#"><img src="../emart/images/slide/slide4.png" alt="slide4" /></a></li>
+      </ul>
+      <ul class="controller">
+        <li class="prev">&lang;</li>
+        <li class="next">&rang;</li>
+      </ul>
+        </div>  
+      <ul class="page">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>  
+      </ul>
+    <!--슬라이드-->
+  <div class="benefit">
+		<div class="inner">
+			<h2>기분좋은 혜택</h2>
+			<ul class="marquee">
+        <div style="width: 100000px; transform: translateX(0px); animation: 10s linear 1s infinite normal none running marqueeAnimation-8525665;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;"></div>
+        <div class="js-marquee" style="margin-right: 0px; float: left;">
+				</div></div></ul>
+			<div class="control">
+				<a class="stop on" href="#"><span class="hide"></span></a>
+				<a class="start" href="#"><span class="hide"></span></a>
+			</div>
+		</div>
+	</div>
+    <div class="mid">
+      <h2>금주의 득템 찬스!</h2>
+      <ul class="con">
+      <li>
+      <p><a href="#"><img src="../emart/images/mid/content1.png" alt="mid1"></a></p>
+      <p><a href="#"><b>이마트 최대 <br>30% 할인 카드!</b></a></p>
+      </li>
+      <li>
+      <p><a href="#"><img src="../emart/images/mid/content2.jpg" alt="mid2"></a></p>
+      <p><a href="#"><b>더 좋은 가격으로 이마트에서 절약하세요!<br>금주의 전단광고 </b></a></p>
+      </li>
+      <li>
+      <p><a href="#"><img src="../emart/images/mid/content3.jpg" alt="mid3"></a></p>
+      <p><a href="#"><b>이마트에서 만나는 <br> 대한항공 마일리지</b></a></p>
+      </li>  
+      </ul>
+    </div>
+    <!-- 가운데 -->
+    <div class="main-joyful">
+        <h2>언제 어디서나 즐거운 콘텐츠</h2>
+        <div class="joyful">
+            <div class="joyful-left">
+              <a href="#"><img src="../emart/images/contents/joyful1.jpg" alt="모바일서비스"></a>
+            </div>
+            <div class="joyful-right">
+            <a class="first" href="#"><img src="../emart/images/contents/joyful2.jpg" alt="이마트 TV"></a>
+            <a class="second" href="#"><img src="../emart/images/contents/joyful3.jpg" alt="뮤직스토리"></a>
+            </div>
+        </div>
+    </div>
+    <!--콘텐츠-->
+    <div class="icon">
+      <ul>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon1.png" alt>
+        <img src="../emart/images/icon/icon1-2.png" alt class="over">
+        <span>트레이더스</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon2.png" alt>
+        <img src="../emart/images/icon/icon2-2.png" alt class="over">
+        <span>노브랜드</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon3.png" alt>
+        <img src="../emart/images/icon/icon3-2.png" alt class="over">
+        <span>몰리스</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon4.png" alt>
+        <img src="../emart/images/icon/icon4-2.png" alt class="over">
+        <span>일렉트로마트</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon5.png" alt>
+        <img src="../emart/images/icon/icon5-2.png" alt class="over">
+        <span>PK Market</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon6.png" alt>
+        <img src="../emart/images/icon/icon6-2.png" alt class="over">
+        <span>SSG푸드마켓</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon7.png" alt>
+        <img src="../emart/images/icon/icon7-2.png" alt class="over">
+        <span>토이킹덤</span>
+        </a>
+       </li>
+       <li>
+        <a href="#">
+        <img src="../emart/images/icon/icon8.png" alt>
+        <img src="../emart/images/icon/icon8-2.png" alt class="over">
+        <span>베이비서클</span>
+        </a>
+       </li>
+      </ul>
+    </div>
+    <!--바로가기 아이콘-->
+    <footer id="footer">
+      <div class="foot_util">
+        <div class="footer-menu">
+          <div class="left">
+            <ul>
+              <li><a href="#">점포찾기</a></li>
+              <li><a href="#">전단광고</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">고객센터</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">자주하는 질문</a></li>
+                  <li><a href="#">고객문의</a></li>
+                  <li><a href="#">고객만족제도</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="right" style="width: auto;">
+            <ul class="footer-util">
+              <li><a href="#">My이마트</a><span>·</span></li>
+              <li><a href="#">이마트뮤직</a><span>·</span></li>
+              <li><a href="#">이마트TV</a></li>
+            </ul>
+          </div>
+          </div>
+        <div class="footer-bottom">
+          <div class="left">
+            <div class="company_info">
+              <em><img src="../emart/images/logo/logo.png" alt="emart"></em>
+    
+              <ul class="detail_info">
+                <li><strong>대표자:</strong> 강희석</li>
+                <li>서울특별시 중구 세종대로7길 37(순화동)</li>
+              </ul>
+              <ul class="detail_info">
+                <li><strong>사업자등록번호:</strong> 206-86-50913</li>
+                <li><strong>통신판매업 신고번호:</strong> 제 2011-서울성동-0345</li>
+                </ul>
+              <ul class="detail_info legal">
+                <li><a href="#">공정거래자율준수프로그램</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li class="important"><a href="#"><em>개인정보처리방침</em></a></li>
+                <li class="important"><a href="#"><em>영상정보처리기기운영, 관리방침</em></a></li>
+              </ul>
+    
+              <ul class="footer_link">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">CSR경영</a></li>
+                <li><a href="#">투자정보(IR)</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">이마트 신문고</a></li>
+              </ul>
+    
+              <ul class="partner-link">
+                            <li><a href="#ft-layer1">협력회사 상담<span>(상품/임대을)</span></a></li>
+                            <li><a href="#ft-layer2">협력회사 상담<span>(임대갑, 기타입찰 및 계약)</span></a></li>
+                            <li><a href="#ft-layer3">협력회사 상담<span>(MRO구매)</span></a></li>
+              </ul>
+              
+            </div>
+          </div>
+          <div class="right">
+            <div class="family_link">
+
+              <select id="familysite">
+                <option value="">FAMILY SITE</option>
+                <option value="#">이마트 회사소개</option>
+                <option value="#">신세계포인트</option>
+                <option value="#">이마트몰</option>
+                <option value="#">이마트 트레이더스</option>
+                <option value="#">이마트 에브리데이</option>
+                <option value="#">이마트24</option>
+                <option value="#">신세계그룹</option>
+                <option value="#">신세계백화점</option>
+                <option value="#">신세계인터내셔날</option>
+                <option value="#">신세계푸드</option>
+                <option value="#">신세계건설</option>
+                <option value="#">신세계아이앤씨</option>
+                <option value="#">스타벅스커피코리아</option>
+                <option value="#">조선호텔앤리조트</option>
+                <option value="#">신세계사이먼</option>
+                <option value="#">SSG.COM</option>
+              </select>
+              <button type="button" onclick="goFamilySite();" title="새창열림">확인</button>
+            </div>
+            <ul class="cs-call">
+              <li><em>이마트대표전화:</em> 02-380-5678</li>
+              <li><em>(주)에스에스지닷컴:</em> 1577-3419</li>
+              <li><em>신세계포인트:</em> 1899-4349</li>
+              <li><em>노브랜드 가맹문의:</em> 02-380-9192</li>
+            </ul>
+            <!-- 인증마크 자리 -->
+            <div class="wa_mark">
+              <a href="#" target="_blank" title="새창">
+                <img class="wa" src="../emart/images/logo/logo_wa.png" width="40" height="30">
+              </a>
+            </div>
+            <!-- //인증마크 자리 -->
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>    
+</body>
+</html>

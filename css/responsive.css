@@ -1,0 +1,130 @@
+/* mobile*/
+@media screen and (max-width:798px) {
+    #profile_wrap .info {
+        text-align: center;
+    }
+    #profile_wrap .info .content {
+        font-size:1.0rem;
+    }
+    #project_wrap section .project_web .web {
+        width:100%; 
+    }
+    #project_wrap section .project_web .web .project .img {
+        height:500px;
+    }
+    #project_wrap section .project_web .web .project .content .link {
+        display: flex;     justify-content: center;
+    }
+    #clone_wrap section .project_clone {
+        flex-flow: column nowrap; align-items: center;
+    }
+    #clone_wrap section .project_clone .clone .project {
+        flex-flow: column nowrap;
+    }
+    #clone_wrap section .project_clone .clone {width:100%;}
+
+    #clone_wrap section .project_clone .clone .project .img {
+        height: 400px; width: 600px;
+    }
+    #clone_wrap section .project_clone .clone .content {
+        align-items: center;   text-align: center;
+        padding-top: 30px;
+    }
+    #clone_wrap section .project_clone .clone .content h2 {
+        font-size: 1.3rem;
+    }
+    #design_wrap section .project_design .design1 .frame {
+        justify-content: center; flex-flow:row wrap;
+    }
+    #design_wrap section .project_design .design1 .frame a {
+        height: 400px; width: 600px;
+    }
+    #design_wrap section .project_design .design1 .frame a:hover {
+        width:600px; height:400px;
+    }
+    #design_wrap section .project_design .design2 {
+        justify-content: center;
+    }
+    #design_wrap section .project_design .design2 .frame {
+        flex-flow: column nowrap;
+    }
+    #design_wrap section .project_design .design2 .frame a {
+        height: 400px; width: 600px;
+    }
+    #design_wrap section .project_design .design2 .frame a:hover {
+        width:600px; height:400px;
+    }
+
+}
+@media screen and (max-width:480px) {
+    header {max-width:480px;}
+    header nav a {
+        font-size:0.875rem;
+    }
+    header nav .gnb > li > a{
+        width:100px;     font-size: 0.875rem;
+    }
+    #profile_wrap {
+        align-items: center;
+    }
+    #profile_wrap .photo {
+        justify-content: center; height:200px;
+    }
+    #profile_wrap .info .keywords {
+        font-size:1.0rem;
+    }
+    #profile_wrap .info .content {
+        font-size:0.875rem;
+    }
+    #project_wrap section .project_web .web .project .img {
+        height:300px; width:400px; margin-right:16px;
+    }
+    #project_wrap section .project_web .web h1 {
+        text-align: center;
+    }
+    #project_wrap section .project_web .web .project .content dl {
+        padding-left:16px;
+    }
+    #project_wrap section .project_web .web .project .content dl dt {
+        font-size: 0.785rem;
+    }
+    #project_wrap section .project_web .web .project .content dl dd {
+        font-size: 0.715rem;
+    }
+    #project_wrap section .project_web .web .project .content .link {
+        margin: 16px 0 0 24px;
+    }
+    #project_wrap section .project_web .web .project .content .link a {
+        font-size: 0.715rem; padding: 7px 0;
+    }
+    #clone_wrap section h1 {
+        text-align: center;
+    }
+    #clone_wrap section .project_clone .clone .project .img {
+        height:300px; width:100%;
+    }
+    #clone_wrap section .project_clone .clone .content p {
+        font-size:0.875rem;
+    }
+    #clone_wrap section .project_clone .clone .link a {
+        font-size:0.785rem;
+    }
+    #design_wrap section .project_design h1 {
+        text-align: center;
+    }
+    #design_wrap section .project_design .design1 .frame a {
+        height:350px;
+    }
+    #design_wrap section .project_design .design2 .frame a {
+        height: 350px;width: 350px;
+        background-size: cover;
+    }
+    footer {
+        font-size:0.875rem;
+    }
+    #project_wrap section .project_web .web .project .content .link a {
+        font-size: 0.715rem; width: 100px;
+        align-items: center;display: flex;
+        text-align: center; justify-content: center;
+    }
+}

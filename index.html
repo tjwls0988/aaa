@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이서진-포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/h_script.js"></script>
+    <!-- 필수 플러그인 fullpage CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css"> -->
+    <!-- 필수 플러그인 fullpage JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script> -->
+    <style>
+        section svg:first-child {
+          stroke-linecap: round; /* 라인 끝 모양*/
+          stroke-dasharray: 623; /*보이는 부분*/
+          animation: move 2.5s forwards; /*forwards 한 번 진행하고 멈추기*/
+        }
+        @keyframes move {
+          from {
+            stroke-dashoffset:250;
+          }
+          to {
+            stroke-dashoffset: 150;
+          }
+        }
+       section svg:nth-child(2)  {
+          stroke-linecap: round; /* 라인 끝 모양*/
+          stroke-dasharray: 623; /*보이는 부분*/
+          animation: move 2.5s forwards; /*forwards 한 번 진행하고 멈추기*/
+        }
+        @keyframes move {
+          from {
+            stroke-dashoffset: 250;
+          }
+          to {
+            stroke-dashoffset: 250;
+          }
+        }
+        svg:nth-child(3)  {
+          stroke-linecap: round; /* 라인 끝 모양*/
+          stroke-dasharray: 623; /*보이는 부분*/
+          animation: move 2.5s forwards; /*forwards 한 번 진행하고 멈추기*/
+        }
+        @keyframes move {
+          from {
+            stroke-dashoffset: 500;
+          }
+          to {
+            stroke-dashoffset: 300;
+          }
+        }
+        svg:last-child  {
+          stroke-linecap: round; /* 라인 끝 모양*/
+          stroke-dasharray: 623; /*보이는 부분*/
+          animation: move 2.5s forwards; /*forwards 한 번 진행하고 멈추기*/
+        }
+        @keyframes move {
+          from {
+            stroke-dashoffset : 250px;;
+          }
+          to {
+            stroke-dashoffset: 150;
+          }
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <!-- <h1><a href="#"><img src="images/logo.jpg" alt=""></a></h1> -->
+        <!-- <div class="header_bottom"> -->
+        <!-- <nav>
+            <ul class="gnb">
+                <li><a href="#">PROFILE</a>
+                </li>
+                <li><a href="#">work</a>
+                </li>
+                <li><a href="images/pdf/resume.pdf" target="_blank">resume</a></li>
+            </ul>
+        </nav> -->
+        <!-- </div> -->    
+    </header>
+    <main id="profile_wrap">
+        <div class="info">
+            <h1>Web Designer</h1>
+            <p class="keywords">#부지런한 #깔끔한 </p>
+            <p class="content">
+                안녕하세요. 이서진입니다.<br>
+                앞으로 더 소비자를 생각하고 편리함과 깔끔함을 추구하는<br>
+                트렌디한 디자이너가 되겠습니다.<br> 
+            </p>
+            <hr>
+            <p class="content">
+                23.02 | 대전보건대학교 의료IT융합과 졸업<br>
+                22.04 | 웹디자인기능사 필기<br>
+                22.01-22.06 | UI/UX 반응형 웹디자인&웹퍼블리셔 NCS 과정 수료
+            </p>
+            <p class="content">
+                TOOL : figma, photoshop, illustrator, html, css, javascript
+            </p>
+        </div>
+        <div class="photo">
+            <a href="images/KakaoTalk_20230523_235641027.jpg"></a>
+        </div>
+    </main>
+
+   <main id="skill">
+    <section>
+        <svg width="250" height="250">
+        <circle
+          cx="50%"
+          cy="50%"
+          r="100"
+          style="stroke: deepskyblue; stroke-width: 20; fill: none"
+         />
+        <text x="90" y="130" fill="black">HTML 80%</text>
+        </svg>     <!--html-->
+
+       <svg width="250" height="250">
+        <circle
+          cx="50%"
+          cy="50%"
+          r="100"
+          style="stroke: deepskyblue; stroke-width: 20; fill: none"
+         />
+        <text x="95" y="130" fill="black">CSS 80%</text>
+        </svg>      <!--css-->
+
+        <svg width="250" height="250">
+        <circle
+          cx="50%"
+          cy="50%"
+          r="100"
+          style="stroke: deepskyblue; stroke-width: 20; fill: none"
+         />
+        <text x="40" y="130" fill="black">javascript / jquery  60%</text>
+        </svg>      <!--javascript / jquery-->
+
+        <svg width="250" height="250">
+        <circle
+          cx="50%"
+          cy="50%"
+          r="100"
+          style="stroke: deepskyblue; stroke-width: 20; fill: none"
+         />
+        <text x="25" y="130" fill="black">Photoshop/Illustrator 90%</text>
+        </svg>      <!--ps / ai--> 
+    </section>
+   
+    <main id="design_wrap">
+        <section><!-- 디자인 프로젝트 시작 -->
+            <div class="project_design">
+                <!-- 첫번째 디자인 프로젝트 -->
+                <h1>01 design-상세페이지디자인</h1>
+                <div class="design design1">
+                    <div class="frame">
+                        <!-- 이미지는 pdf로 저장 후 하위경로로 pdf link 연결 -->
+                        <a href="images/notice1.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/notice2.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/notice3.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/notice4.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/notice5.jpg" target="_blank"><!--background-image CSS--></a>
+                    </div>
+                </div>
+                <!-- 두번째 디자인 프로젝트 -->
+                <h1>02 design-sns광고디자인</h1>
+                <div class="design design2">
+                    <div class="frame">
+                        <!-- 이미지는 pdf로 저장 후 하위경로로 pdf link 연결 -->
+                        <a href="images/sns1.png" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns2.png" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns3.png" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns4.png" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns5.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns6.jpg" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns7.png" target="_blank"><!--background-image CSS--></a>
+                        <a href="images/sns8.jpg" target="_blank"><!--background-image CSS--></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <main id="project_wrap">
+        <section>
+            <!-- 웹프로젝트소개시작 -->
+            <div class="project_web">
+                <!--  첫번째 웹 프로젝트 -->
+                <div class="web web1">
+                    <h1>01 web</h1>
+                    <div class="project">
+                        <div class="img img1"><!--프로젝트이미지배경 CSS--></div>
+                        <div class="content">
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>메가박스 리디자인</dd>
+                                <dt>프로젝트 구성</dt>
+                                <dd>리디자인</dd>
+                                <dt>프로젝트 참여도</dt>
+                                <dd>1인 프로젝트 / 참여도 100%</dd>
+                                <dt>Tool</dt>
+                                <dd>figma, html, css, javascript</dd>
+                            </dl>
+                            <div class="link">
+                                <a href="https://www.figma.com/file/kR1SPz309kRGCe6Vc6U9TK/movie-life-와이어프레임?type=design&node-id=0-1&t=wHywCubUqnjff0Qg-0" target="_blank">figma wireframes</a><!--피그마 와이어프레임 링크+스케치포함-->
+                                <a href="https://www.figma.com/file/MKpt812q7lIjLFbVtEYOLR/movie-life-프로토타입?type=design&node-id=0-1&t=WO2XyFCcAKkeESRT-0" target="_blank">figma prototype</a><br><!--피그마 프로토타입 링크-->
+                                <a href="movies/index.html" target="_blank">web prototype</a><!--최종 html 프로토타입 링크(하위경로 구성)-->
+                                <a href="https://www.megabox.co.kr/" target="_blank">기존 사이트</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  두번째 웹 프로젝트 -->
+                <div class="web web2">
+                    <h1>02 클론 코딩</h1>
+                    <div class="project">
+                        <div class="img img2"></div>
+                        <div class="content">
+                            <dl>
+                                <dt>프로젝트명</dt>
+                                <dd>헬로!이마트 클론 코딩 </dd>
+                                <dt>프로젝트 구성</dt>
+                                <dd>기존 사이트 클론 코딩</dd>
+                                <dt>프로젝트 참여도</dt>
+                                <dd>1인 프로젝트 / 참여도 100%</dd>
+                                <dt>Tool</dt>
+                                <dd>html, css, javascript</dd>
+                            </dl>
+                            <div class="link">
+                                <a href="emart/index.html" target="_blank">web prototype</a><!--기획서 pdf 링크(미리캔버스)(하위경로 구성)-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>        
+    
+        <hr>   
+    
+    <footer>
+        braveseoj@gmail.com<br>
+        +82 10-6623-9760
+    </footer>
+</body>
+</html>

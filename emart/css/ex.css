@@ -1,0 +1,100 @@
+@charset "utf-8";*{
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+body {
+  font: 16px Arial, "맑은 고딕", sans-serif;
+}
+.top ul a {  
+  text-align: center;
+  width: 80%;
+  font-size: 13px;
+  color: #666;
+  font-weight: bolder;
+}
+.top {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #666;
+  padding: 10px;
+}
+.top .right {
+  float: right;
+}
+.header {
+  margin: 50px;
+}
+.header ul{
+    text-align: center;
+}
+.header ul a {
+  margin: 50px;
+  font-weight: bolder;
+}
+.header img {
+    width: 130px;
+}
+.mid h2 {
+  padding: 20px;
+  text-align: center;
+  font-weight:bolder;
+}
+.mid {
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+}
+.mid img {
+  margin: 0;
+ float: left;
+ margin: 20px;
+ padding-bottom: 20px;
+}
+.mid ul {
+  width: 1200px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.mid ul li p:nth-child(2) {
+  font-size: 15px;
+  font-style: bold;
+  text-align: center;
+}
+.contents h1 {
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 150px;
+  margin-bottom: 32px;
+}
+.contents {
+  text-align: center;
+  margin:130px;
+}
+.contents p#a {
+  margin-left: -30px;
+}
+ .contents p#b {
+  margin-left: 10px;
+}
+.contents p#c {
+  margin-left: 10px;
+} 
+.icon {
+  height: 100px;
+  width: 100%;
+}
+.icon img {
+padding: 45px;
+}

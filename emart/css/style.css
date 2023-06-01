@@ -1,0 +1,421 @@
+@charset "utf-8";*{
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+list-style: none;
+}
+a {
+text-decoration: none;
+color: #333;
+}
+.wrap {
+width: 1200px;
+margin: 0 auto;
+}
+body {
+font: 16px Arial, "맑은 고딕", sans-serif;
+}
+.top ul a {  
+text-align: center;
+width: 80%;
+font-size: 13px;
+color: #666;
+font-weight: bolder;
+}
+.top {
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #666;
+padding: 10px;
+}
+.top .right {
+float: right;
+}
+.header {
+margin: 50px;
+}
+.header ul{
+  text-align: center;
+}
+.header ul a {
+margin: 50px;
+font-weight: bolder;
+}
+.header img {
+  width: 130px;
+}/*header*/
+.main-leaflet { 
+  width:980px; 
+  margin:0 auto;
+}
+.main-leaflet .swiper-slide{
+  width: 316px !important; 
+  margin-right:16px
+}	
+.benefit {
+  position:relative; 
+  z-index:10; 
+  width:900px; 
+  overflow:hidden; 
+  margin:-75px auto 0;
+  background:#fff;
+}
+.benefit .inner {
+  position:relative;
+  width:505px; 
+  height:67px; 
+  padding:0 65px 0 150px; 
+  margin:40px auto; 
+  border-bottom:2px solid #000;
+}
+.benefit h2 {
+  position:absolute; 
+  top:3px; 
+  left:0;
+  font-size:20px; 
+  color:#000; 
+  font-weight:900;
+}
+.benefit ul {
+   height: 40px;
+   overflow: hidden; 
+   white-space: nowrap; 
+  }
+.benefit li { 
+  float:left; 
+  margin-right: 50px;
+  margin-bottom: 20px; 
+  color: #666; 
+  font-size: 15px; 
+}
+.benefit li strong {
+  font-weight:500;
+}
+.benefit .control {
+  position:absolute; 
+  top:0; 
+  right:0;
+}
+.benefit .control a {
+  display: none; 
+  width: 24px;
+   height: 24px; 
+   background: url(https://eapp-cdn.emart.com/store/main/main_top_slide.png) no-repeat;
+  }
+.benefit .control a.on {
+  display:block;
+}
+.benefit .control .start {
+  background-position: 0 -28px;
+}
+.benefit .control .stop {
+  background-position: 0 -58px;
+}
+ /*mid*/
+.mid h2 {
+padding: 20px;
+text-align: center;
+font-weight:bolder;
+}
+.mid {
+width: 1200px;
+height: 500px;
+margin: 0 auto;
+}
+.mid img {
+margin: 0;
+float: left;
+margin: 10px;
+padding-bottom: 20px;
+}
+.mid ul {
+width: 1200px;
+display: flex;
+text-align: center;
+justify-content: center;
+}
+.mid ul li {
+  margin: 0;
+}
+.mid ul li p:nth-child(2) {
+font-size: 15px;
+font-style: bold;
+text-align: center;
+}  
+ /*mid*/
+ /*joyful*/
+.main-joyful {
+  width: 996px; 
+  margin: 100px auto;
+}
+.main-joyful h2 {
+  margin-bottom: 32px; 
+  font-size: 24px; 
+  color: #000; 
+  text-align: center; 
+  line-height: 1;
+}
+.main-joyful ul {
+  overflow: hidden;
+}
+.main-joyful li {
+  float: left; 
+  margin: 8px;
+}
+ .joyful { 
+  width: 980px; 
+  margin: 0 auto;
+}         
+.joyful .joyful-left { 
+  margin-right: 300px; 
+}       
+.joyful .joyful-right { 
+  float: left; 
+  width: 316px; 
+  margin-left: 665px;
+  margin-top: -533px;
+}
+.joyful .joyful-right .first { 
+  display: block; 
+  margin-top: 17px; 
+  margin-bottom: 12px;
+}          
+.joyful .joyful-right .second { 
+  margin-top: 0; 
+}
+/*joyful*/
+
+/*icon*/
+.icon {
+  width: 1160px; 
+  margin: 50px auto;
+}
+.icon ul {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+.icon li {
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+}
+.icon a {
+  display: block;
+  text-decoration: none;
+}
+.icon a img.over {
+  display: none;
+}
+.icon a:hover img {
+  display: none;
+}
+.icon a:hover img.over {
+  display: inline;
+}
+.icon a:hover span {
+  color: #000;
+}
+.icon span {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #808080;
+  line-height: 1;
+}
+/*icon*/
+
+/*footer*/
+.foot_util .left {
+  position: relative; 
+  display: inline-block;
+ }
+.foot_util .right {
+  position: relative; 
+  float: right; 
+  width: 210px;
+}
+.footer-menu {
+  position: relative; 
+  padding: 35px 0 30px;
+  border-bottom: 2px solid #000; 
+  letter-spacing: 0;
+}
+.footer-menu:after{
+  content:''; 
+  display: table; 
+  clear: both;
+}
+.footer-menu a {
+  font-size: 14px;
+}
+.footer-menu ul li {
+  float: left;
+}
+.footer-menu ul > li {
+  margin-right: 15px;
+}
+.footer-menu ul > li:last-child {
+  margin-right: 0;
+}
+.footer-menu ul > li > a {
+  float: left;
+  font-size: 16px; 
+  color: #000;
+}
+.footer-menu ul > li > ul {
+  position: relative;
+  top: 4px;
+  float: left;
+  margin-left: 10px;
+}
+.footer-menu ul > li > ul > li {
+  height: 10px; 
+  padding: 0 6px; 
+  margin: 0; 
+  border-left: 1px solid #e5e5e5;
+}
+.footer-menu ul > li > ul > li:first-child {
+  border-left: none;
+}
+.footer-menu ul > li > ul > li > a {
+  display: inline-block;
+  margin-top: -4px;
+  font-size: 14px; 
+  color: #666; 
+  letter-spacing: -1px;
+}
+.footer-menu .right {
+  text-align: right;
+}
+.footer-menu .footer-util {
+  overflow: hidden;
+}
+.footer-menu .footer-util li {
+  float: left;
+  margin-right: 0;
+}
+.footer-menu .footer-util li span {
+  font-size: 14px;
+   margin: 0 0 0 1px;
+   vertical-align: top;
+  }
+.footer-menu .footer-util li a {
+  font-size: 14px;
+}
+
+.footer-bottom {
+  padding-bottom: 25px;
+}
+.footer-bottom:after {
+  content:''; 
+  display: table; 
+  clear: both;
+}
+.footer-bottom > ul	{
+  float: left;
+  margin-left: 180px;
+}
+.footer-bottom > ul > li {
+  float: left;
+  margin-right: 50px;
+}
+.footer-bottom .family_link{
+  margin: 30px 0;
+}
+.footer-bottom .family_link select {
+  width: 150px;
+  height: 42px;
+  border: none;
+  border-bottom: 2px solid #010101;
+  font-size: 14px;
+}
+.footer-bottom .family_link button{
+   width: 50px;  
+   float: right;  
+   margin-top: 5px; 
+   border: 0;
+   line-height: 28px; 
+   background-color: #fff; 
+    border: 1px solid #000; 
+     color: #000;
+}
+.footer-bottom .cs-call {
+  font-size: 13px; 
+  color: #666; 
+  letter-spacing: -1px;
+}
+.footer-bottom .cs-call li {
+  margin-bottom: 12px;
+}
+.footer-bottom .cs-call em {
+  color: #333;
+}
+
+#footer .company_info {
+  position: relative;
+  padding: 28px 0 44px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+#footer .company_info > em	{
+  float: left; 
+  margin-right: 17px;
+}
+#footer .company_info a {
+  font-size: 13px;
+}
+#footer .company_info .footer_link	{
+  margin-top: 30px;
+}
+#footer .company_info .footer_link > li	{
+  display: inline-block;
+  margin-right: 10px;
+}
+#footer .company_info .footer_link > li:first-child{
+  padding: 0;
+}
+#footer .company_info .footer_link > li > a	{
+  color: #000;
+}
+#footer .company_info .partner-link {
+  margin-top: 10px; 
+  padding-top: 10px; 
+  border-top: 1px solid #e5e5e5;
+}
+#footer .company_info .partner-link > li {
+  display: inline-block; 
+  margin-right: 8px;
+}
+#footer .company_info .partner-link > li > a {
+  color: #333;
+}
+#footer .company_info .partner-link > li > a > span {
+  color: #666;
+}
+#footer .company_info .detail_info	{
+  overflow: hidden;
+  margin-top: 12px;
+}
+#footer .company_info .detail_info > li	{
+  float: left;
+  display: inline-block; 
+  margin-right: 14px;
+}
+#footer .company_info .detail_info > li strong {
+  color:#333;
+  font-weight:400;
+}
+#footer .company_info .detail_info.legal .important { 
+  position: relative;
+   top: -1px; 
+}
+#footer .company_info .detail_info.legal .important a { 
+  font-size: 15px;
+}
+#footer .company_info .detail_info.legal .important a,
+#footer .company_info .detail_info.legal .important a:focus,
+#footer .company_info .detail_info.legal .important a:hover { 
+  color: red; 
+}

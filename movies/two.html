@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중경삼림</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="css/poster2.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap");
+    </style>
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          ul {
+            list-style: none;
+          }
+          #slideShow {
+            width: 1000px;
+            height: 500px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+          }
+          .slides {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0.5s ease-out;
+          }
+          .slides img {
+            width: 1000px;
+            height: 500px;
+            object-fit: cover;
+          }
+          .slides li:not(:last-child) {
+            float: left;
+          }
+          .controller li {
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            padding: 10px 20px;
+            top: 50%;
+            font-size: 1.3em;
+            cursor: pointer;
+          }
+          .prev {
+            left: 10px;
+          }
+          .prev:hover {
+            transform: translateX(-10px);
+          }
+          .next {
+            right: 10px;
+          }
+          .next:hover {
+            transform: translateX(10px);
+          }
+          .page {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+          }
+          .dot {
+            display: inline-block;
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            transition: background-color 0.6s ease;
+          }
+          .active,
+          .dot:hover {
+            background-color: #717171;
+          }
+        </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main">
+        <div class="bg">
+          <div class="inner">
+            <div class="top">
+              <p><a href="#">Vip Lounge</a></p>
+              <div class="logo">
+                <a href="index.html">movie life</a>
+              </div>
+              <!--logo-->
+
+              <ul>
+                <li>
+                  <a href="#">회원가입 &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                  </li>
+                 <li><a href="#">로그인</a>
+                </li>
+              </ul>
+            </div>
+            </div><!--inner-->
+            <!--회원가입/vip-->
+            <header>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">영화</a>
+                        <ul class="sub">
+                          <li><a href="#">전체영화</a></li>
+                          <li><a href="#">영화제</a></li>
+                          <li><a href="#">무대인사</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">예매</a>
+                        <ul class="sub">
+                          <li><a href="#">빠른예매</a></li>
+                          <li><a href="#">상영시간표</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">상영관</a>
+                        <ul class="sub">
+                            <li><a href="#">전체상영관</a></li>
+                            <li><a href="#">특별관</a></li>
+                            <li><a href="#">대관문의</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">혜택</a>
+                        <ul class="sub">
+                            <li><a href="#">vip lounge</a></li>
+                            <li><a href="#">멤버십</a></li>
+                            <li><a href="#">할인 / 적립</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">스토어</a>
+                        <ul class="sub">
+                            <li><a href="#">매점</a></li>
+                            <li><a href="#">굿즈</a></li>
+                            <li><a href="#">메가티켓</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="#">제휴이벤트</a></li>
+                            <li><a href="#">지난이벤트</a></li>
+                            <li><a href="#">진행이벤트</a></li>
+                            <li><a href="#">당첨자발표</a></li>
+                        </ul>
+                      </li>
+                </ul>
+            </div>
+        </header>
+          <!--header-->
+        </div><!--bg-->
+          <div class="bgtwo">
+            <div class="notice">
+             <img src="images/poster/poster2.jpg">
+            <ul class="desc">
+             <h1>重慶森林: Chungking Express</h1>
+             <h1><b>중경삼림: 리마스터링</b></h1>
+             
+             <li>
+             <p>예매율 17.7%</p>
+             <p>실관람객 평점 8.7</p>
+            </li>
+             </ul>
+
+          </div>
+        </div>
+        <div class="col"><!--상세정보-->
+                    <div class="noticet">
+                    <input type="radio" name="board" id="notice" checked>
+                    <input type="radio" name="board" id="reivew">
+                    <input type="radio" name="board" id="feed">
+                    <input type="radio" name="board" id="photo">
+                      <ul class="btn">
+                        <li><label for="notice">상세정보</label></li>
+                        <li><label for="reivew">실관람평</label></li>
+                        <li><label for="feed">무비포스트</label></li>
+                        <li><label for="photo">예고편/스틸컷</label></li>
+                     </ul>
+                     <div class="con">
+                        <ul class="ncon">
+                          <li>
+                             <p><b>감독</b> : 왕가위<br> </p>   
+                             <p><b>장르</b> : 드라마<br></p>
+                             <p><b>등급</b> : 15세이상관람가 <br></p>
+                             <p><b>출연</b> : 임청하, 양조위, 왕페이, 금성무, 주가령</p>
+                           </li>
+                          <li>
+                            <h2>줄거리</h2><br><br>
+                            <p>
+                              1994년 홍콩, “내 사랑의 유통기한은 만 년으로 하고 싶다”</p>
+                              <br><br><br><br>
+                            
+                              <p>
+                              만우절의 이별 통보가 거짓말이길 바라며 술집을 찾은 경찰<br> 223 고단한 하루를 보내고 
+                              술집에 들어온 금발머리의 마약밀매상<br>  "그녀가 떠난 후 이 방의 모든 것들이 슬퍼한다"  
+                              여자친구가 남긴 이별 편지를 외면하고 있는 경찰 663 <br>편지 속에 담긴 그의 아파트 열쇠를 손에 쥔 
+                              단골집 점원 페이 <br>네 사람이 만들어낸 두 개의 로맨스 새로운 사랑을 만나는 방법에 대한 독특한 상상력
+                            </p>
+                          </li>  
+                        </ul>
+
+                        <ul class="rcon">
+                          <li>
+                           <h1>아직 남겨진 실관람평이 없어요.</h1><br>
+                                  <div class="box">
+                                  <p>첫번째 관람평의 주인공이 되어보세요.</p>
+                                   <a href="#"><ins>관람평 쓰기</ins></a>
+                                  </div> 
+                           </li>
+                        </ul>
+
+                        <ul class="fcon">
+                         <h1>아직 남겨진 무비포스트가 없어요.</h1><br>
+                         <div class="box">
+                          <p>아직 작성된 무비포스트가 없어요. 첫번째 무비포스트의 주인공이 되어보세요. </p>
+                          <a href="#"><ins>무비포스트 쓰기</ins></a>
+                         </div>  
+                        </ul>
+
+                        <ul class="pcon">
+                          <div id="slideShow">
+                            <ul class="slides">
+                              <li><img src="images/pcon/cut1.jpg" alt="cut1" /></li>
+                              <li><img src="images/pcon/cut2.jpg" alt="cut2" /></li>
+                              <li><img src="images/pcon/cut3.jpg" alt="cut3" /></li>
+                              <li><img src="images/pcon/cut4.jpg" alt="cut4" /></li>
+                              <li><img src="images/pcon/cut5.jpg" alt="cut5" /></li>
+                              <li><img src="images/pcon/cut6.jpg" alt="cut6" /></li>
+                            </ul>
+                            <ul class="controller">
+                              <li class="prev">&lang;</li>
+                              <li class="next">&rang;</li>
+                            </ul>
+                            <ul class="page">
+                              <li class="dot"></li>
+                              <li class="dot"></li>
+                              <li class="dot"></li>
+                              <li class="dot"></li>
+                              <li class="dot"></li>
+                              <li class="dot"></li>
+                            </ul>
+                          </div>
+                          <script>
+                            let slideani = document.getElementById("slideShow");
+                            let slides = document.querySelector(".slides");
+                            let slideImg = document.querySelectorAll(".slides li");
+                            let dots = document.querySelectorAll(".dot");
+                            let currentIdx = 0;
+                            let slideCount = slideImg.length;
+                            dots[0].className += " active";
+                            let prev = document.querySelector(".prev"); //이전 버튼
+                            let next = document.querySelector(".next"); //다음 버튼
+                            let slideWidth = 1000; //슬라이드이미지 넓이
+                            makeClone(); // 처음이미지와 마지막 이미지 복사 함수
+                            initfunction(); //슬라이드 넓이와 위치값 초기화 함수
+                            function makeClone() {
+                              let cloneSlide_first = slideImg[0].cloneNode(true);
+                              let cloneSlide_last = slides.lastElementChild.cloneNode(true);
+                              slides.append(cloneSlide_first);
+                              //slides.prepend(cloneSlide_last);
+                              slides.insertBefore(cloneSlide_last, slides.firstElementChild);
+                            }
+                            function initfunction() {
+                              slides.style.width = slideWidth * (slideCount + 2) + "px";
+                              slides.style.left = -slideWidth + "px";
+                            }
+                            function showSlide(n) {
+                              for (i = 0; i < slideImg.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              dots[n].className += " active";
+                              slides.style.left = -(n + 1) * slideWidth + "px";
+                              slides.style.transition = "0.5s";
+                            }
+                            /*function currentSlide(n) {
+                              showSlide((currentIdx = n));
+                            }*/
+                            dots.forEach(function (value, index) {
+                              console.log(index);
+                              value.onclick = function (e) {
+                                let j = Array.from(dots).indexOf(e.target);
+                                showSlide((currentIdx = j));
+                              };
+                            });
+                            next.onclick = function () {
+                              if (currentIdx <= slideCount - 1) {
+                                //슬라이드이동
+                                slides.style.left = -(currentIdx + 2) * slideWidth + "px";
+                                slides.style.transition = "0.5s";
+                              }
+                              if (currentIdx === slideCount - 1) {
+                                //마지막 슬라이드 일때
+                                setTimeout(function () {
+                                  //0.5초동안 복사한 첫번째 이미지에서, 진짜 첫번째 위치로 이동
+                                  slides.style.left = -slideWidth + "px";
+                                  slides.style.transition = "0s";
+                                }, 500);
+                                currentIdx = -1;
+                              }
+                              currentIdx += 1;
+                              for (i = 0; i < slideImg.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              dots[currentIdx].className += " active";
+                            };
+                            let interval = setInterval(function () {
+                              next.onclick();
+                            }, 2000);
+                            prev.onclick = function () {
+                              //이전 버튼 눌렀을때
+                              console.log(currentIdx);
+                              if (currentIdx >= 0) {
+                                slides.style.left = -currentIdx * slideWidth + "px";
+                                slides.style.transition = "0.5s";
+                              }
+                              if (currentIdx === 0) {
+                                setTimeout(function () {
+                                  slides.style.left = -slideCount * slideWidth + "px";
+                                  slides.style.transition = "0s";
+                                }, 500);
+                                currentIdx = slideCount;
+                              }
+                              currentIdx -= 1;
+                              for (i = 0; i < slideImg.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              dots[currentIdx].className += " active";
+                            };
+                            function slide_stop() {
+                              clearInterval(interval);
+                            }
+                            slideani.addEventListener("mouseenter", function () {
+                              slide_stop();
+                            });
+                            slideani.addEventListener("mouseleave", function () {
+                              interval = setInterval(function () {
+                                next.onclick();
+                              }, 2000);
+                            });
+                          </script>
+
+                        </ul>
+                         
+            </div>
+        </div>
+     </div>
+     <div class="bgthree">
+      <div class="footer">
+        <div class="one">
+            <a href="#"> |&nbsp;&nbsp;회사소개 &nbsp;&nbsp;|</a>
+            <a href="#">인재채용 &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+            <a href="#">이용약관 &nbsp;&nbsp;|</a>
+            <a href="#">&nbsp;&nbsp;제휴/광고/부대사업문의 &nbsp;&nbsp;|</a>
+            <a href="#">&nbsp;&nbsp;위치기반서비스약관 &nbsp;&nbsp;|</a>
+            <a href="#">&nbsp;&nbsp;개인정보처리방침 &nbsp;&nbsp;|</a> <br>
+         </div>   
+          <div class="two">
+              <img src="images/logo/logo.png">
+                <a>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어)
+                ARS 1544-0070 <bR>
+                대표자명 홍정인 | 개인정보보호책임자 공성진 |  사업자등록번호 211-86-59478 | 통신판매업신고번호 2023-서울성동-0177 <br>
+                COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</a>
+            </div>
+         </div>
+  </div>
+  </body>
+</html>
